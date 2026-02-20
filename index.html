@@ -1,7 +1,289 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Encyclopaedia Romana</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: rgba(15, 20, 30, 0.92);
+      --text: #e9edf3;
+      --muted: #b9c2d0;
+      --accent: #d6b36a;
+      --stroke: rgba(214, 179, 106, 0.9);
+      --hover: rgba(214, 179, 106, 0.22);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, #172033 0%, var(--bg) 55%);
+      color: var(--text);
+    }
+    header {
+      padding: 28px 18px 10px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1 { margin: 0; font-weight: 800; letter-spacing: 0.3px; }
+    p.lede { margin: 10px 0 0; color: var(--muted); max-width: 70ch; line-height: 1.5; }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 16px auto 48px;
+      padding: 0 14px;
+    }
+
+    .map-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    /* Keep map responsive while preserving aspect ratio */
+    .map-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1600 / 1066; /* your image dimensions */
+      background: #0c1018;
+    }
+    .map-stage svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hintbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: rgba(0,0,0,0.25);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pill {
+      border: 1px solid rgba(214,179,106,0.35);
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.25px;
+      white-space: nowrap;
+    }
+
+    /* Province regions */
+    .province {
+      fill: transparent;
+      stroke: var(--stroke);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+      cursor: pointer;
+      transition: fill 140ms ease, opacity 140ms ease;
+      opacity: 0.95;
+    }
+    .province:hover { fill: var(--hover); }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 50;
+    }
+    .modal {
+      width: min(720px, 100%);
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .modal header {
+      padding: 16px 16px 10px;
+      margin: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    .modal h2 { margin: 0; font-size: 20px; }
+    .modal .content {
+      padding: 12px 16px 16px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .modal .actions {
+      display: flex;
+      gap: 10px;
+      padding: 14px 16px 16px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn:hover { background: rgba(255,255,255,0.10); }
+    .btn.primary {
+      border-color: rgba(214,179,106,0.55);
+      background: rgba(214,179,106,0.12);
+      color: var(--text);
+    }
+    .btn.primary:hover { background: rgba(214,179,106,0.20); }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>Encyclopaedia Romana</h1>
+    <p class="lede">
+      A personal knowledge archive of the Roman world. Click a province on the map to open a short summary and jump to a detailed page.
+    </p>
+  </header>
+
+  <div class="wrap">
+    <div class="map-card">
+      <div class="map-stage" aria-label="Map of the Roman Empire with clickable provinces">
+        <!-- SVG overlay on top of your map image -->
+        <svg viewBox="0 0 1600 1066" role="img">
+          <!-- Your map image (keep it in the same folder as index.html) -->
+          <image href="roman_empire_map.webp" x="0" y="0" width="1600" height="1066" />
+
+          <!-- EXAMPLE PROVINCE HIT-AREAS (rough, tweak points to match perfectly) -->
+          <!-- Britannia -->
+          <polygon class="province" data-id="britannia"
+            points="110,135 235,115 330,175 290,245 185,260 115,215" />
+
+          <!-- Italia -->
+          <polygon class="province" data-id="italia"
+            points="700,390 815,385 845,460 820,540 760,590 710,560 700,500" />
+
+          <!-- Aegyptus -->
+          <polygon class="province" data-id="aegyptus"
+            points="1130,640 1235,650 1270,740 1195,810 1115,770" />
+
+          <!-- Asia (western Anatolia-ish) -->
+          <polygon class="province" data-id="asia"
+            points="1050,465 1185,475 1210,545 1125,600 1035,560" />
+
+          <!-- Baetica (southern Hispania) -->
+          <polygon class="province" data-id="baetica"
+            points="145,655 290,635 330,700 255,770 150,735" />
+
+          <!-- Add more polygons here -->
+        </svg>
+      </div>
+
+      <div class="hintbar">
+        <div>Tip: hover to see regions, click to open details.</div>
+        <div class="pill">117 CE (peak extent)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <header>
+        <h2 id="modalTitle">Province</h2>
+      </header>
+      <div class="content" id="modalBody"></div>
+      <div class="actions">
+        <button class="btn" id="closeBtn" type="button">Close</button>
+        <a class="btn primary" id="moreLink" href="#" rel="noopener">More info →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Province database: edit text + links here
+    const PROVINCES = {
+      britannia: {
+        name: "Britannia",
+        summary: "A frontier province beyond the Channel; military-heavy administration centered on legionary bases and key towns like Londinium.",
+        link: "provinces/britannia.html"
+      },
+      italia: {
+        name: "Italia",
+        summary: "The imperial heartland—Rome’s core territory and political center, linked by dense roads, cities, and Mediterranean trade routes.",
+        link: "provinces/italia.html"
+      },
+      aegyptus: {
+        name: "Aegyptus",
+        summary: "A strategically vital province governed as an imperial domain; grain, Nile logistics, and Alexandria’s intellectual life made it indispensable.",
+        link: "provinces/aegyptus.html"
+      },
+      asia: {
+        name: "Asia",
+        summary: "Wealthy urbanized region of western Anatolia, dense in Greek cities, temples, and commerce; an important tax base for the empire.",
+        link: "provinces/asia.html"
+      },
+      baetica: {
+        name: "Baetica",
+        summary: "Prosperous southern Hispania known for agriculture and especially olive oil exports; a highly Romanized region with strong municipal life.",
+        link: "provinces/baetica.html"
+      }
+    };
+
+    const backdrop = document.getElementById("modalBackdrop");
+    const titleEl = document.getElementById("modalTitle");
+    const bodyEl = document.getElementById("modalBody");
+    const moreLink = document.getElementById("moreLink");
+    const closeBtn = document.getElementById("closeBtn");
+
+    function openModal(provinceId) {
+      const p = PROVINCES[provinceId];
+      if (!p) return;
+
+      titleEl.textContent = p.name;
+      bodyEl.textContent = p.summary;
+      moreLink.href = p.link;
+
+      backdrop.style.display = "flex";
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      backdrop.style.display = "none";
+    }
+
+    // Click handlers for province regions
+    document.querySelectorAll(".province").forEach(el => {
+      el.addEventListener("click", () => openModal(el.dataset.id));
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") openModal(el.dataset.id);
+      });
+      // accessibility
+      el.setAttribute("tabindex", "0");
+      el.setAttribute("role", "button");
+      el.setAttribute("aria-label", `Open details for ${el.dataset.id}`);
+    });
+
+    // Close modal by clicking backdrop or pressing Escape
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeModal();
+    });
+    closeBtn.addEventListener("click", closeModal);
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && backdrop.style.display === "flex") closeModal();
+    });
+  </script>
 </body>
 </html>
