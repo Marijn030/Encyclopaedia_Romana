@@ -91,6 +91,9 @@
       opacity: 0.95;
     }
     .province:hover { fill: var(--hover); }
+    .province { pointer-events: all; }
+    .province { stroke-width: 2; }
+    .province:hover { stroke-width: 3; }
 
     /* Modal */
     .modal-backdrop {
@@ -168,8 +171,67 @@
 
             <!-- Britannia -->
             <polygon class="province" data-id="britannia"
-            points="258,17 263,35 279,44 287,58 291,71 297,79 301,102 299,113 323,113 335,122 332,146 325,158 315,168 323,177 324,187 314,199 299,201 280,206 263,208 249,204 239,212 218,211 201,213 201,229 185,223 167,222 157,233 143,232 166,213 180,195 183,187 196,187 196,172 184,172 177,165 169,168 155,164 169,148 183,143 186,122 186,113 175,115 173,102 176,95 187,95 201,95 210,83 211,74 211,64 204,52 200,37" />
-
+              points="254,14 263,36 277,42 290,60 288,70 297,79 297,87 302,96 307,110 294,110 301,117 319,110 331,115 336,125 338,138 334,148 325,162 317,172 329,175 328,186 317,197 308,200 300,205 290,203 274,205 264,202 261,212 252,206 243,203 240,213 232,206 219,207 208,210 204,220 195,227 181,220 167,226 158,237 151,231 155,223 158,214 168,206 174,193 182,197 184,183 199,181 192,171 184,173 175,164 164,171 155,164 157,152 167,152 178,144 187,135 185,115 178,118 170,118 181,107 172,97 182,93 194,96 201,96 206,87 213,80 212,67 198,45 198,33" />
+            
+            <!-- Germania Inferior -->
+            <polygon class="province" data-id="germania_inferior"
+              points="401,147 424,154 438,148 472,174 457,156 475,192 482,209 492,222 479,235 452,230 428,219 410,202 404,172 392,171 383,163" />
+            
+            <!-- Belgica -->
+            <polygon class="province" data-id="belgica"
+              points="382,161 387,174 399,174 407,184 408,197 424,216 438,226 448,230 478,236 486,243 489,262 486,281 476,283 468,298 447,298 438,291 427,293 418,280 377,250 351,250 339,225 331,226 334,199 355,191 367,181" />
+            
+            <!-- Lugdunensis -->
+            <polygon class="province" data-id="lugdunensis"
+              points="329,228 340,228 350,253 374,249 394,262 405,273 417,279 426,296 438,296 448,301 431,318 435,329 441,339 450,352 456,363 459,373 448,373 443,380 431,379 424,387 424,403 422,411 412,414 404,403 393,403 394,383 381,366 374,351 367,339 357,331 346,337 337,344 323,354 311,361 292,363 278,366 255,365 244,365 233,355 230,341 227,332 219,332 210,335 210,327 199,322 182,324 172,313 180,310 173,301 169,291 179,286 190,286 203,284 213,281 223,293 233,287 241,287 250,290 250,270 244,260 244,246 259,249 264,256 274,259 284,263 291,263 295,249 308,241 319,237" />
+            
+            <!-- Aquitania -->
+            <polygon class="province" data-id="aquitania"
+              points="240,364 254,362 266,365 285,367 301,361 317,354 334,344 343,337 356,331 367,343 382,354 384,367 389,382 393,399 406,408 411,416 408,427 400,433 393,440 384,449 369,451 345,461 329,460 318,471 325,477 335,485 331,495 317,495 304,488 288,491 280,487 267,491 250,484 259,467 257,451 260,433 264,410 259,396 252,388 252,377" />
+            
+            <!-- Narbonensis -->
+            <polygon class="province" data-id="narbonensis"
+              points="455,374 447,377 441,382 431,377 423,385 423,399 423,413 410,416 411,429 399,433 392,439 387,446 379,450 365,457 345,461 328,459 317,473 335,484 328,500 338,507 348,508 356,508 367,511 375,495 384,487 399,481 407,484 413,488 421,487 430,488 435,493 445,498 454,498 462,493 469,484 478,480 488,476 486,467 475,469 466,463 457,449 457,434 449,419 458,411 461,400 461,384" />
+            
+            <!-- Alpes Maritimae -->
+            <polygon class="province" data-id="alpes_maritimae"
+              points="455,453 464,440 469,446 478,439 481,450 489,456 488,464 478,466 469,467" />
+            
+            <!-- Alpes Cottiae -->
+            <polygon class="province" data-id="alpes_cottiae"
+              points="455,448 462,440 468,445 478,440 473,420 483,414 459,400 461,409 452,414 457,426" />
+            
+            <!-- Alpes Poeninae -->
+            <polygon class="province" data-id="alpes_poeninae"
+              points="457,403 471,413 482,413 478,386 490,386 500,382 506,373 500,366 483,366 485,358 469,355 466,363 457,365 455,372 461,376 462,387 458,394" />
+            
+            <!-- Germania Superior -->
+            <polygon class="province" data-id="germania_superior"
+              points="455,369 462,366 469,353 464,346 486,345 495,329 517,330 516,319 526,316 531,305 531,294 541,287 546,279 540,264 533,248 520,233 514,217 506,206 496,207 489,223 481,233 489,243 489,253 488,267 486,281 478,282 469,299 447,301 435,311 432,325 438,335 444,342 449,350 454,357" />
+            
+            <!-- Raetia -->
+            <polygon class="province" data-id="raetia"
+              points="465,349 485,346 492,334 506,327 514,331 514,318 526,317 530,304 534,293 543,280 551,281 571,281 579,284 591,284 599,290 613,286 616,293 630,298 630,311 626,321 616,328 605,331 594,336 591,346 585,370 572,370 560,369 529,372 505,376 503,366 486,369 483,361 472,355" />
+            
+            <!-- Noricum -->
+            <polygon class="province" data-id="noricum"
+              points="587,371 594,339 606,330 622,322 630,301 639,306 646,311 656,313 669,322 681,322 693,322 702,318 710,319 719,326 701,343 690,349 680,363 677,376 667,377 660,384 653,376 637,376 628,376 619,373 611,373" />
+            
+            <!-- Pannonia Superior -->
+            <polygon class="province" data-id="pannonia_superior"
+              points="637,377 656,377 660,385 667,377 677,376 680,362 690,346 701,344 710,334 717,327 728,327 735,327 743,338 751,344 749,353 741,366 736,376 738,392 729,397 729,406 728,414 729,428 711,414 695,414 674,414 654,413 653,399" />
+            
+            <!-- Pannonia Inferior -->
+            <polygon class="province" data-id="pannonia_inferior"
+              points="731,429 726,413 729,396 741,395 735,379 741,371 741,361 749,355 746,337 759,340 766,343 777,338 786,345 784,355 784,365 789,372 783,379 786,388 782,396 786,408 797,409 803,413 816,413 817,429 823,436 813,442 800,439 789,436 780,433 758,434 746,428" />
+            
+            <!-- Dacia -->
+            <polygon class="province" data-id="dacia"
+              points="816,417 814,392 851,392 862,382 873,370 876,358 882,349 893,349 902,353 914,346 927,341 939,344 950,348 950,358 958,366 964,370 981,383 974,389 971,403 965,414 948,420 941,430 941,441 941,452 941,464 939,481 930,482 919,479 896,475 888,479 888,465 873,459 881,454 869,443 865,452 854,443 841,443 831,445 825,438 817,435" />
+            
+            <!-- Moesia Inferior -->
+            <polygon class="province" data-id="moesia_inferior"
+              points="906,476 914,476 919,483 927,475 931,483 939,480 936,468 940,451 940,432 946,421 955,419 964,415 968,405 971,391 975,381 987,387 994,400 999,410 1009,410 1018,418 1023,410 1037,410 1052,404 1061,401 1071,391 1074,380 1083,367 1094,359 1108,353 1114,361 1122,363 1136,363 1145,364 1149,373 1141,388 1114,380 1108,369 1094,371 1087,384 1076,398 1069,404 1069,421 1060,436 1049,438 1037,452 1035,482 1023,487 1018,496 1016,504 1016,511 1011,517 972,511 964,507 937,507 916,507 905,503 907,489" />
             <!-- Baetica -->
             <polygon class="province" data-id="baetica"
             points="170,634 153,647 145,650 135,650 111,660 104,674 107,685 108,699 118,697 125,708 128,715 134,728 146,738 159,725 170,721 177,714 193,714 221,716 233,712 245,701 225,685 208,693 190,680 206,672 197,649" />
@@ -214,31 +276,22 @@
   <script>
     // Province database: edit text + links here
     const PROVINCES = {
-      britannia: {
-        name: "Britannia",
-        summary: "A frontier province beyond the Channel; military-heavy administration centered on legionary bases and key towns like Londinium.",
-        link: "provinces/britannia.html"
-      },
-      italia: {
-        name: "Italia",
-        summary: "The imperial heartland—Rome’s core territory and political center, linked by dense roads, cities, and Mediterranean trade routes.",
-        link: "provinces/italia.html"
-      },
-      aegyptus: {
-        name: "Aegyptus",
-        summary: "A strategically vital province governed as an imperial domain; grain, Nile logistics, and Alexandria’s intellectual life made it indispensable.",
-        link: "provinces/aegyptus.html"
-      },
-      asia: {
-        name: "Asia",
-        summary: "Wealthy urbanized region of western Anatolia, dense in Greek cities, temples, and commerce; an important tax base for the empire.",
-        link: "provinces/asia.html"
-      },
-      baetica: {
-        name: "Baetica",
-        summary: "Prosperous southern Hispania known for agriculture and especially olive oil exports; a highly Romanized region with strong municipal life.",
-        link: "provinces/baetica.html"
-      }
+      britannia: { name: "Britannia", summary: "...", link: "provinces/britannia.html" },
+      germania_inferior: { name: "Germania Inferior", summary: "...", link: "provinces/germania-inferior.html" },
+      belgica: { name: "Belgica", summary: "...", link: "provinces/belgica.html" },
+      lugdunensis: { name: "Gallia Lugdunensis", summary: "...", link: "provinces/lugdunensis.html" },
+      aquitania: { name: "Aquitania", summary: "...", link: "provinces/aquitania.html" },
+      narbonensis: { name: "Gallia Narbonensis", summary: "...", link: "provinces/narbonensis.html" },
+      alpes_maritimae: { name: "Alpes Maritimae", summary: "...", link: "provinces/alpes-maritimae.html" },
+      alpes_cottiae: { name: "Alpes Cottiae", summary: "...", link: "provinces/alpes-cottiae.html" },
+      alpes_poeninae: { name: "Alpes Poeninae", summary: "...", link: "provinces/alpes-poeninae.html" },
+      germania_superior: { name: "Germania Superior", summary: "...", link: "provinces/germania-superior.html" },
+      raetia: { name: "Raetia", summary: "...", link: "provinces/raetia.html" },
+      noricum: { name: "Noricum", summary: "...", link: "provinces/noricum.html" },
+      pannonia_superior: { name: "Pannonia Superior", summary: "...", link: "provinces/pannonia-superior.html" },
+      pannonia_inferior: { name: "Pannonia Inferior", summary: "...", link: "provinces/pannonia-inferior.html" },
+      dacia: { name: "Dacia", summary: "...", link: "provinces/dacia.html" },
+      moesia_inferior: { name: "Moesia Inferior", summary: "...", link: "provinces/moesia-inferior.html" },
     };
 
     const backdrop = document.getElementById("modalBackdrop");
