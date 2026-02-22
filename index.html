@@ -166,9 +166,9 @@
   <div class="wrap">
     <div class="map-card">
       <div class="map-stage" aria-label="Map of the Roman Empire with clickable provinces">
-        <!-- SVG overlay on top of your map image -->
+        <!-- SVG overlay on top of map image -->
         <svg viewBox="0 0 1600 1066" role="img">
-          <!-- Your map image (keep it in the same folder as index.html) -->
+          <!-- Map image (keep in the same folder as index.html) -->
           <image href="roman_empire_map.webp" x="0" y="0" width="1600" height="1066" />
 
             <!-- Britannia -->
@@ -298,11 +298,73 @@
             <polygon class="province" data-id="baetica"
               points="105,698 110,687 105,673 107,660 122,658 133,651 146,653 147,644 171,634 178,640 184,647 198,650 201,658 209,667 198,680 205,685 212,691 225,684 232,691 243,699 237,709 229,711 220,715 211,712 194,712 179,712 172,718 158,723 148,735 136,729 131,718 124,705" />
 
+            <!-- Mauretania Tingitana -->
+            <polygon class="province" data-id="mauretania_tingitana"
+              points="137,746 154,736 161,753 172,760 184,760 195,760 204,760 213,752 218,760 232,762 228,774 219,783 212,796 206,815 187,820 171,820 160,825 153,835 144,835 136,842 124,852 106,863 90,870 79,882 65,890 52,903 41,909 34,902 38,893 35,876 54,856 51,845 62,837 68,822 85,818 98,808 110,805 120,791 126,776 130,762" />
+            
+            <!-- Mauretania Caesariensis -->
+            <polygon class="province" data-id="mauretania_caesariensis"
+              points="233,765 245,763 261,755 261,746 273,742 281,737 288,739 295,731 305,727 315,721 331,720 346,717 360,717 367,707 376,707 384,708 392,704 400,705 421,707 427,717 428,727 425,737 430,746 423,751 421,763 413,771 406,778 396,779 387,790 376,790 353,796 326,793 314,802 295,797 283,803 277,809 259,809 246,809 230,809 206,814 212,802 219,786 229,773" />
+            
+            <!-- Africa Proconsularis -->
+            <polygon class="province" data-id="africa_proconsularis"
+              points="427,717 435,711 452,711 458,698 466,707 476,707 479,700 489,704 496,710 506,705 522,704 529,694 537,694 546,691 557,696 554,705 560,711 568,705 578,701 579,708 574,720 565,728 568,739 574,745 582,754 579,762 575,775 563,789 553,790 555,799 563,807 572,799 577,806 579,814 587,824 596,824 606,833 619,837 636,831 650,836 661,838 670,847 687,848 693,858 695,872 707,881 721,885 736,885 749,889 763,896 772,903 780,910 789,913 797,912 801,935 792,936 779,936 762,927 752,920 741,910 726,906 712,898 697,898 683,889 677,878 667,869 657,857 645,850 625,854 608,847 594,844 579,838 558,826 546,819 529,809 510,810 492,813 483,817 472,819 464,816 455,810 444,809 437,803 431,792 421,793 413,793 410,782 404,773 413,772 421,762 421,752 428,746 424,734 430,724" />
+            
+            <!-- Creta et Cyrenaica (Crete) -->
+            <polygon class="province" data-id="creta_et_cyrenaica"
+              points="907,744 919,748 923,754 933,755 946,755 960,755 961,763 974,758 977,764 970,767 953,767 939,770 933,764 922,763 905,763 905,753" />
+            <!-- Creta et Cyrenaica (Cyrenaica) -->
+            <polygon class="province" data-id="creta_et_cyrenaica"
+              points="794,912 808,906 816,889 813,874 813,858 827,844 838,838 847,838 854,830 865,833 873,836 889,841 893,851 906,853 914,855 919,861 934,861 944,865 947,874 961,871 974,872 985,875 992,878 1004,879 1011,886 1012,920 1001,920 995,930 979,929 965,929 953,929 943,932 930,936 922,936 909,935 896,925 878,923 865,923 851,920 838,929 820,932 808,936 800,937" />
+            
             <!-- Aegyptus -->
             <polygon class="province" data-id="aegyptus"
-            points="1153,884 1139,885 1126,881 1114,872 1102,872 1074,878 1060,886 1046,889 1012,881 1008,920 1033,926 1052,935 1054,951 1054,967 1070,973 1078,990 1088,1019 1100,1045 1105,1062 1193,1063 1179,1029 1172,1005 1169,990 1151,974 1143,957 1136,940 1135,923 1145,916" />
-
-          <!-- Add more polygons here -->
+              points="1011,884 1019,889 1033,889 1047,896 1063,891 1073,879 1085,878 1098,869 1111,878 1121,875 1131,884 1139,892 1152,886 1142,923 1132,932 1139,943 1143,956 1153,968 1165,981 1170,992 1173,1004 1175,1015 1179,1031 1187,1042 1193,1053 1199,1065 1108,1065 1104,1048 1097,1036 1098,1017 1090,1004 1080,997 1080,980 1071,971 1061,971 1052,971 1049,961 1054,954 1057,943 1050,932 1039,933 1026,926 1009,919" />
+            
+            <!-- Arabia Petraea -->
+            <polygon class="province" data-id="arabia_petraea"
+              points="1153,887 1139,927 1143,940 1156,955 1155,967 1165,974 1167,984 1179,989 1184,981 1196,979 1207,981 1210,988 1216,974 1218,962 1221,947 1227,927 1232,913 1241,899 1252,890 1258,873 1261,859 1264,841 1262,828 1258,812 1247,811 1244,822 1241,839 1238,858 1232,875 1227,882 1210,882 1206,889 1196,889 1180,882 1167,886" />
+            
+            <!-- Judea -->
+            <polygon class="province" data-id="judea"
+              points="1176,883 1187,890 1199,890 1208,886 1221,881 1230,878 1234,860 1237,845 1241,822 1232,820 1227,829 1217,832 1203,832 1199,843 1196,857 1190,869" />
+            
+            <!-- Syria -->
+            <polygon class="province" data-id="syria"
+              points="1203,833 1223,833 1232,821 1244,821 1255,812 1262,802 1275,799 1286,790 1292,782 1295,769 1309,759 1310,737 1290,732 1292,722 1290,708 1283,693 1307,680 1314,672 1313,659 1299,653 1298,661 1298,670 1289,677 1278,677 1255,674 1254,685 1249,701 1232,708 1221,720 1227,729 1221,740 1224,752 1224,766 1230,776 1218,784 1216,799 1211,813" />
+            
+            <!-- Cilicia -->
+            <polygon class="province" data-id="cilicia"
+              points="1232,712 1244,708 1251,697 1252,675 1249,665 1238,664 1225,664 1216,667 1206,670 1197,670 1190,678 1183,687 1176,695 1162,695 1148,689 1139,695 1142,706 1136,716 1129,725 1136,732 1148,735 1158,732 1170,732 1176,725 1182,715 1193,708 1203,714 1211,719 1220,712" />
+            
+            <!-- Cyprus -->
+            <polygon class="province" data-id="cyprus"
+              points="1129,767 1136,761 1148,764 1148,754 1159,755 1173,755 1187,743 1182,750 1177,765 1169,770 1162,778 1153,778 1145,778 1134,774" />
+            
+            <!-- Lycia et Pamphylia -->
+            <polygon class="province" data-id="lycia_et_pamphylia"
+              points="1128,728 1136,714 1139,696 1131,690 1117,690 1111,679 1100,666 1085,672 1074,677 1071,686 1073,693 1061,697 1050,703 1043,711 1049,720 1049,728 1057,727 1063,732 1070,730 1083,722 1084,711 1095,710 1104,708 1114,714" />
+            
+            <!-- Galatia -->
+            <polygon class="province" data-id="galatia"
+              points="1100,665 1105,676 1117,689 1128,690 1141,697 1148,692 1158,696 1170,696 1182,685 1187,671 1187,654 1186,641 1184,628 1190,615 1199,620 1208,623 1214,613 1223,603 1217,596 1207,591 1199,583 1190,563 1172,562 1153,563 1142,573 1136,583 1118,591 1118,603 1129,614 1126,623 1135,628 1145,637 1148,648 1136,655 1128,662 1117,659 1108,659" />
+            
+            <!-- Cappadocia -->
+            <polygon class="province" data-id="cappadocia"
+              points="1184,688 1186,671 1189,652 1186,634 1194,620 1202,620 1213,623 1220,613 1225,604 1218,594 1205,589 1198,579 1192,563 1203,560 1218,563 1230,566 1237,563 1246,560 1256,565 1266,569 1275,566 1281,573 1292,573 1308,569 1316,569 1325,572 1336,572 1348,569 1357,562 1369,555 1374,542 1372,519 1381,525 1390,534 1393,548 1390,558 1384,563 1376,572 1367,583 1348,593 1342,606 1336,620 1336,630 1342,641 1338,648 1326,645 1314,645 1302,646 1301,657 1302,666 1297,677 1281,677 1268,674 1254,676 1251,667 1242,663 1226,663 1211,670 1199,673 1190,682" />
+            
+            <!-- Armenia -->
+            <polygon class="province" data-id="armenia"
+              points="1299,654 1310,641 1323,641 1331,644 1341,644 1337,630 1332,620 1338,606 1345,591 1356,584 1369,576 1383,563 1395,567 1412,569 1426,563 1441,560 1454,553 1467,555 1479,557 1498,557 1511,565 1522,573 1533,584 1544,590 1554,594 1563,606 1556,617 1550,622 1539,631 1526,632 1505,631 1489,634 1477,638 1468,641 1457,641 1448,655 1431,659 1423,663 1412,663 1400,668 1383,679 1373,678 1359,676 1349,679 1344,666 1335,662 1316,657" />
+            
+            <!-- Mesopotamia -->
+            <polygon class="province" data-id="mesopotamia"
+              points="1281,697 1303,685 1312,673 1314,663 1326,660 1337,661 1343,665 1348,681 1354,677 1363,678 1374,677 1381,680 1394,692 1398,704 1408,708 1408,718 1416,723 1422,729 1428,742 1420,752 1429,760 1430,773 1435,781 1439,788 1442,794 1449,797 1459,808 1454,818 1460,827 1470,835 1483,839 1485,848 1495,845 1508,845 1511,853 1511,862 1518,866 1526,868 1525,876 1532,885 1535,897 1526,904 1517,907 1504,902 1493,897 1473,892 1464,890 1446,879 1435,868 1420,856 1405,838 1394,829 1379,825 1365,812 1351,803 1340,790 1330,780 1320,769 1310,759 1312,749 1309,736 1298,732 1288,732 1290,722 1289,709" />
+            
+            <!-- Assyria -->
+            <polygon class="province" data-id="assyria"
+              points="1380,679 1393,674 1406,668 1417,668 1428,662 1434,657 1445,659 1450,668 1447,682 1457,689 1468,699 1465,712 1459,729 1461,747 1464,765 1469,781 1468,792 1474,809 1482,821 1482,840 1471,840 1459,832 1451,822 1457,813 1451,801 1441,799 1434,789 1428,777 1428,764 1416,753 1426,743 1418,730 1407,723 1403,710 1393,701 1386,689" />
+       
         </svg>
       </div>
 
@@ -328,39 +390,256 @@
   </div>
 
   <script>
-    // Province database: edit text + links here
     const PROVINCES = {
-      britannia: { name: "Britannia", summary: "...", link: "provinces/britannia.html" },
-      germania_inferior: { name: "Germania Inferior", summary: "...", link: "provinces/germania-inferior.html" },
-      belgica: { name: "Belgica", summary: "...", link: "provinces/belgica.html" },
-      lugdunensis: { name: "Gallia Lugdunensis", summary: "...", link: "provinces/lugdunensis.html" },
-      aquitania: { name: "Aquitania", summary: "...", link: "provinces/aquitania.html" },
-      narbonensis: { name: "Gallia Narbonensis", summary: "...", link: "provinces/narbonensis.html" },
-      alpes_maritimae: { name: "Alpes Maritimae", summary: "...", link: "provinces/alpes-maritimae.html" },
-      alpes_cottiae: { name: "Alpes Cottiae", summary: "...", link: "provinces/alpes-cottiae.html" },
-      alpes_poeninae: { name: "Alpes Poeninae", summary: "...", link: "provinces/alpes-poeninae.html" },
-      germania_superior: { name: "Germania Superior", summary: "...", link: "provinces/germania-superior.html" },
-      raetia: { name: "Raetia", summary: "...", link: "provinces/raetia.html" },
-      noricum: { name: "Noricum", summary: "...", link: "provinces/noricum.html" },
-      pannonia_superior: { name: "Pannonia Superior", summary: "...", link: "provinces/pannonia-superior.html" },
-      pannonia_inferior: { name: "Pannonia Inferior", summary: "...", link: "provinces/pannonia-inferior.html" },
-      dacia: { name: "Dacia", summary: "...", link: "provinces/dacia.html" },
-      moesia_inferior: { name: "Moesia Inferior", summary: "...", link: "provinces/moesia-inferior.html" },
-      italia: { name: "Italia", summary: "…", link: "provinces/italia.html" },
-      corsica_et_sardinia: { name: "Corsica et Sardinia", summary: "…", link: "provinces/corsica-et-sardinia.html" },
-      sicilia: { name: "Sicilia", summary: "…", link: "provinces/sicilia.html" },
-      dalmatia: { name: "Dalmatia", summary: "…", link: "provinces/dalmatia.html" },
-      moesia_superior: { name: "Moesia Superior", summary: "…", link: "provinces/moesia-superior.html" },
-      thracia: { name: "Thracia", summary: "…", link: "provinces/thracia.html" },
-      macedonia: { name: "Macedonia", summary: "…", link: "provinces/macedonia.html" },
-      epirus: { name: "Epirus", summary: "…", link: "provinces/epirus.html" },
-      achaia: { name: "Achaia", summary: "…", link: "provinces/achaia.html" },
-      asia: { name: "Asia", summary: "…", link: "provinces/asia.html" },
-      bithynia_et_pontus: { name: "Bithynia et Pontus", summary: "…", link: "provinces/bithynia-et-pontus.html" },
-      regnum_bospori: { name: "Regnum Bospori", summary: "…", link: "provinces/regnum-bospori.html" },
-      tarraconensis: { name: "Tarraconensis", summary: "…", link: "provinces/tarraconensis.html" },
-      lusitania: { name: "Lusitania", summary: "…", link: "provinces/lusitania.html" },
-      baetica: { name: "Baetica", summary: "…", link: "provinces/baetica.html" },
+      britannia: {
+        name: "Britannia",
+        summary: "A heavily militarized frontier province beyond the Channel, guarded by legions and famous for Hadrian’s Wall and the northern border with Caledonia.",
+        link: "provinces/britannia.html",
+      },
+      germania_inferior: {
+        name: "Germania Inferior",
+        summary: "Lower Rhine frontier province with major legionary bases and river trade, crucial for defending the empire against raids and incursions from Germania.",
+        link: "provinces/germania-inferior.html",
+      },
+      belgica: {
+        name: "Belgica",
+        summary: "A northern Gallic province of forests, farms, and towns, linking the Channel coast to the Rhine and serving as a strategic corridor for armies and commerce.",
+        link: "provinces/belgica.html",
+      },
+      lugdunensis: {
+        name: "Gallia Lugdunensis",
+        summary: "Central Gaul, organized around Lugdunum (Lyon), a key administrative and economic hub connecting Atlantic, Mediterranean, and Rhine networks.",
+        link: "provinces/lugdunensis.html",
+      },
+      aquitania: {
+        name: "Aquitania",
+        summary: "Southwestern Gaul between the Garonne and the Pyrenees, known for fertile land, Atlantic routes, and a mix of Roman and local cultural traditions.",
+        link: "provinces/aquitania.html",
+      },
+      narbonensis: {
+        name: "Gallia Narbonensis",
+        summary: "The Romanized Mediterranean corridor of southern Gaul—old, urban, and wealthy—anchored by ports, vineyards, and the overland route into Italy.",
+        link: "provinces/narbonensis.html",
+      },
+    
+      alpes_maritimae: {
+        name: "Alpes Maritimae",
+        summary: "A compact Alpine province controlling passes between the Riviera and northern Italy, important for movement of troops, goods, and communications.",
+        link: "provinces/alpes-maritimae.html",
+      },
+      alpes_cottiae: {
+        name: "Alpes Cottiae",
+        summary: "Mountain province centered on key Alpine passes (including routes toward the Montgenèvre area), securing travel between Italy and Gaul.",
+        link: "provinces/alpes-cottiae.html",
+      },
+      alpes_poeninae: {
+        name: "Alpes Poeninae",
+        summary: "High Alpine territory guarding important transalpine routes (Great St Bernard region), controlling strategic movement across the mountains.",
+        link: "provinces/alpes-poeninae.html",
+      },
+    
+      germania_superior: {
+        name: "Germania Superior",
+        summary: "Upper Rhine frontier province with forts and the limes system, balancing Roman urban life with constant military readiness along the border zone.",
+        link: "provinces/germania-superior.html",
+      },
+      raetia: {
+        name: "Raetia",
+        summary: "Alpine and Danubian province guarding mountain passes and the northern approaches to Italy, with forts tied to the frontier defense system.",
+        link: "provinces/raetia.html",
+      },
+      noricum: {
+        name: "Noricum",
+        summary: "Danubian province famed for mineral resources (including iron) and for guarding key stretches of the river frontier and routes into the Balkans.",
+        link: "provinces/noricum.html",
+      },
+    
+      pannonia_superior: {
+        name: "Pannonia Superior",
+        summary: "Western Pannonia on the Danube, a major military zone with legionary bases that protected the empire’s middle Danube frontier.",
+        link: "provinces/pannonia-superior.html",
+      },
+      pannonia_inferior: {
+        name: "Pannonia Inferior",
+        summary: "Eastern Pannonia along the Danube, strategically vital and strongly garrisoned; its towns and roads supported rapid frontier response.",
+        link: "provinces/pannonia-inferior.html",
+      },
+    
+      dacia: {
+        name: "Dacia",
+        summary: "A trans-Danubian province created after Trajan’s wars, rich in resources and difficult to defend—famous for forts, mines, and later withdrawal.",
+        link: "provinces/dacia.html",
+      },
+    
+      moesia_inferior: {
+        name: "Moesia Inferior",
+        summary: "Lower Danube province facing steppe and Black Sea threats; its fortresses and river patrols were central to Roman defense in the region.",
+        link: "provinces/moesia-inferior.html",
+      },
+      moesia_superior: {
+        name: "Moesia Superior",
+        summary: "Upper Moesia in the central Balkans, supporting Danube defenses and internal routes; a key region in later imperial military politics.",
+        link: "provinces/moesia-superior.html",
+      },
+    
+      italia: {
+        name: "Italia",
+        summary: "The imperial heartland—Rome and its peninsula—dense with roads, cities, and ports; politically central even when emperors ruled from afar.",
+        link: "provinces/italia.html",
+      },
+      corsica_et_sardinia: {
+        name: "Corsica et Sardinia",
+        summary: "Twin Tyrrhenian islands supplying grain, timber, and strategic harbors; often quieter than frontier provinces but valuable for logistics.",
+        link: "provinces/corsica-et-sardinia.html",
+      },
+      sicilia: {
+        name: "Sicilia",
+        summary: "A key Mediterranean island province, early and deeply integrated into Roman power; important for grain supply, shipping lanes, and naval reach.",
+        link: "provinces/sicilia.html",
+      },
+    
+      dalmatia: {
+        name: "Dalmatia",
+        summary: "Rugged Adriatic province with mountainous interior and coastal routes; historically rebellious, later a major recruiting ground and strategic corridor.",
+        link: "provinces/dalmatia.html",
+      },
+      thracia: {
+        name: "Thracia",
+        summary: "Strategic province bridging the Balkans and the Aegean, controlling routes toward Byzantium and the Hellespont with a mix of cities and forts.",
+        link: "provinces/thracia.html",
+      },
+      macedonia: {
+        name: "Macedonia",
+        summary: "A Balkan province anchored by the Via Egnatia, linking Adriatic ports to the Aegean—an enduring crossroads of trade, armies, and culture.",
+        link: "provinces/macedonia.html",
+      },
+      epirus: {
+        name: "Epirus",
+        summary: "Northwestern Greek province of rugged terrain and coastal harbors, important for regional routes and ties between Italy and the Greek world.",
+        link: "provinces/epirus.html",
+      },
+      achaia: {
+        name: "Achaia",
+        summary: "Southern Greece—highly urban and culturally prestigious—home to famous sanctuaries and cities, and a symbolically important part of the empire.",
+        link: "provinces/achaia.html",
+      },
+    
+      asia: {
+        name: "Asia",
+        summary: "Wealthy, urbanized western Anatolia with dense Greek city networks, temples, and trade—one of the empire’s most prosperous tax bases.",
+        link: "provinces/asia.html",
+      },
+      bithynia_et_pontus: {
+        name: "Bithynia et Pontus",
+        summary: "Northern Anatolian province along the Black Sea, mixing coastal commerce with inland towns; notable for imperial attention and famous correspondence under Pliny.",
+        link: "provinces/bithynia-et-pontus.html",
+      },
+    
+      regnum_bospori: {
+        name: "Regnum Bospori",
+        summary: "A Roman client kingdom around the Cimmerian Bosporus (Crimea region), acting as a buffer and trade partner on the Black Sea’s northern edge.",
+        link: "provinces/regnum-bospori.html",
+      },
+    
+      tarraconensis: {
+        name: "Tarraconensis",
+        summary: "Largest province of Hispania, spanning much of the peninsula; varied landscapes, mines and farms, and major cities tied to Mediterranean and Atlantic routes.",
+        link: "provinces/tarraconensis.html",
+      },
+      lusitania: {
+        name: "Lusitania",
+        summary: "Western Iberian province of river valleys and uplands, with important towns and resources; connected by roads linking Atlantic ports to inland regions.",
+        link: "provinces/lusitania.html",
+      },
+      baetica: {
+        name: "Baetica",
+        summary: "Prosperous southern Hispania—highly Romanized—famous for olive oil exports and wealthy cities; a major contributor to Rome’s food economy.",
+        link: "provinces/baetica.html",
+      },
+    
+      mauretania_tingitana: {
+        name: "Mauretania Tingitana",
+        summary: "Northwestern African province around the Strait of Gibraltar, guarding Atlantic–Mediterranean passage and connected closely to southern Hispania.",
+        link: "provinces/mauretania-tingitana.html",
+      },
+      mauretania_caesariensis: {
+        name: "Mauretania Caesariensis",
+        summary: "Central North African coastal province with fertile zones and frontier pressures inland; its ports linked Africa to Italy and the western Mediterranean.",
+        link: "provinces/mauretania-caesariensis.html",
+      },
+      africa_proconsularis: {
+        name: "Africa Proconsularis",
+        summary: "One of Rome’s richest provinces, centered on Carthage; a powerhouse of grain and olive production that fed cities across the Mediterranean.",
+        link: "provinces/africa-proconsularis.html",
+      },
+    
+      creta_et_cyrenaica: {
+        name: "Creta et Cyrenaica",
+        summary: "A paired province combining Crete and the Cyrenaican coast—maritime routes, Greek cities, and agricultural estates tied to eastern Mediterranean trade.",
+        link: "provinces/creta-et-cyrenaica.html",
+      },
+    
+      aegyptus: {
+        name: "Aegyptus",
+        summary: "Imperial-controlled province centered on Alexandria and the Nile; vital grain supply, complex administration, and a cultural powerhouse of the eastern Mediterranean.",
+        link: "provinces/aegyptus.html",
+      },
+    
+      arabia_petraea: {
+        name: "Arabia Petraea",
+        summary: "Desert province guarding caravan routes and the approaches to the Red Sea; famous for Petra and for linking Syria, Judaea, and Egypt by road.",
+        link: "provinces/arabia-petraea.html",
+      },
+      judea: {
+        name: "Judaea",
+        summary: "Politically sensitive province on the eastern Mediterranean; shaped by major revolts, strong urban–religious identity, and heavy military oversight.",
+        link: "provinces/judea.html",
+      },
+      syria: {
+        name: "Syria",
+        summary: "A major eastern province with wealthy cities and strong legions; a strategic base facing Parthia and controlling routes into Mesopotamia and Arabia.",
+        link: "provinces/syria.html",
+      },
+      cilicia: {
+        name: "Cilicia",
+        summary: "Southern Anatolian province of coastal plains and mountain gates; controlled key passes (like the Cilician Gates) between Anatolia and Syria.",
+        link: "provinces/cilicia.html",
+      },
+      cyprus: {
+        name: "Cyprus",
+        summary: "Island province rich in copper and maritime connections, positioned on key sea lanes between Anatolia, Syria, and Egypt.",
+        link: "provinces/cyprus.html",
+      },
+      lycia_et_pamphylia: {
+        name: "Lycia et Pamphylia",
+        summary: "Southern Anatolian coastal province of rugged mountains and harbors; known for seafaring routes, cities, and strong regional identities under Rome.",
+        link: "provinces/lycia-et-pamphylia.html",
+      },
+      galatia: {
+        name: "Galatia",
+        summary: "Central Anatolian province with a mix of old Celtic heritage and Roman administration; an inland crossroads supporting movement across Asia Minor.",
+        link: "provinces/galatia.html",
+      },
+      cappadocia: {
+        name: "Cappadocia",
+        summary: "Eastern Anatolian frontier province with powerful garrisons; key base for eastern campaigns and defense against Parthian and later Persian pressure.",
+        link: "provinces/cappadocia.html",
+      },
+      armenia: {
+        name: "Armenia",
+        summary: "A contested highland kingdom on Rome’s eastern frontier, often a buffer state between Rome and Parthia, with shifting alliances and strategic importance.",
+        link: "provinces/armenia.html",
+      },
+      mesopotamia: {
+        name: "Mesopotamia",
+        summary: "Eastern frontier province between the great rivers, acquired and contested in wars with Parthia; strategically vital but hard to hold and defend.",
+        link: "provinces/mesopotamia.html",
+      },
+      assyria: {
+        name: "Assyria",
+        summary: "A short-lived eastern province name associated with Rome’s farthest expansion under Trajan; emblematic of the empire’s reach and frontier ambition.",
+        link: "provinces/assyria.html",
+      },
     };
 
     const backdrop = document.getElementById("modalBackdrop");
